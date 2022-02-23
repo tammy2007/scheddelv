@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11;">
+	<link rel="shortcut icon" href="./src/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="./src/os_websched.css?d41ec9e508eedd964c1a4dff31cc9815" type="text/css">
+	<script type="text/javascript" src="./src/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./src/os_websched.js?d41ec9e508eedd964c1a4dff31cc9815"></script>
+	<title>Add new - Web page publication schedule</title>
+</head>
+<body>
+
+<header>
+	<h1><a href="index.html" class="decnone">Web page publication schedule</a></h1>
+	<nav>
+		<ul>
+			<li class="nv_list"><a href="index.html" tabindex="-1">List view</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div id="main">
+	<div id="container_form">
+	<form id="add_form" method="POST" action="index.html">
+		<div class="btn_box">
+			<input type="submit" name="submit" value="Save" tabindex="1">
+			<input type="reset" value="Reset" style="margin-right:70px;" tabindex="-1">
+			<input type="button" name="allclear" value="All clear" class="allclear" tabindex="-1" style="display: inline-block;">
+		</div>
+
+		<div id="task_form">
+<div id="task_form_a">
+	<div class="froat_l">
+		<p id="ca_itemstr" class="item_str required">Copy / Add new</p>
+		<div class="sel_box cdnm_sl_box " style="display: inline-block;">
+			<select name="cd_nm" id="cd_nm" tabindex="2">
+				<option value="--">-- Select an item --</option>
+				<option value="new" class="ckbft">[ Add new name ]</option>
+				<optgroup label="Device-A">
+				<option value="cd123">Anthony (Aylmer)</option>
+				<option value="cd126">Anthony (Harold)</option>
+				<option value="cd127">Anthony (Tobias)</option>
+				<option value="cd128">Anthony (Ulysses)</option>
+				<option value="cd129">Anthony (Vincent)</option>
+				<option value="cd125">Anthony (Warren)</option>
+				<option value="cd150">Barry</option>
+				<option value="cd122">Freddie</option>
+				<option value="cd140">Gerald</option>
+				<option value="cd151">Hamilton</option>
+				<option value="cd151">Hamilton II</option>
+				<option value="cd115">Lee X</option>
+				<option value="cd154">Loretta</option>
+				<option value="cd152">Mavis3</option>
+				<option value="cd146">Mavis4</option>
+				<option value="cd155">Natalia</option>
+				<option value="cd141">Rosemary</option>
+				<option value="cd153">Sabrina2</option>
+				<option value="cd147">Sabrina3</option>
+				<option value="cd139">Scott</option>
+				<option value="cd121">Scott single</option>
+				<option value="cd136">Victor</option>
+				</optgroup>
+				<optgroup label="Device-B">
+				<option value="cd114">Bertoldo Centurelli</option>
+				<option value="cd161">Bettina Wittmann</option>
+				<option value="cd162">Cassandra Pinna</option>
+				<option value="cd163">Huguette Murville</option>
+				<option value="cd167">Marie Königsperger</option>
+				<option value="cd164">Melody Mottelay</option>
+				<option value="cd100">Jordan</option>
+				<option value="cd166">Jordan Bork</option>
+				<option value="cd99">Traugott</option>
+				<option value="cd168">Traugott Blochwitz</option>
+				<option value="cd165">Pat Beckford</option>
+				<option value="cd6">Virgilio Bonelli</option>
+				<option value="cd51">Vivian Macnaghten</option>
+				</optgroup>
+				<optgroup label="Software-A">
+				<option value="cd1">Adolph</option>
+				<option value="cd85">Daniel</option>
+				<option value="cd107">Glenn</option>
+				<option value="cd118">Kevin</option>
+				<option value="cd32">Morgan</option>
+				<option value="cd169">Oliver</option>
+				<option value="cd86">Percival</option>
+				<option value="cd47">Stewart</option>
+				<option value="cd59">Toby</option>
+				<option value="cd52">Walter</option>
+				</optgroup><optgroup label="Cloud service">
+				<option value="cd104">Denis</option>
+				<option value="cd104">Frank</option>
+				<option value="cd33">Ian</option>
+				<option value="cd120">Simon</option>
+				<option value="cd73">Nicholas</option>
+				</optgroup>
+				<optgroup label="Subscription service">
+				<option value="cd21">Ben</option>
+				<option value="cd123">Anthony Subscription (Aylmer)</option>
+				<option value="cd126">Anthony Subscription (Harold)</option>
+				<option value="cd127">Anthony Subscription (Tobias)</option>
+				<option value="cd128">Anthony Subscription (Ulysses)</option>
+				<option value="cd129">Anthony Subscription (Vincent)</option>
+				<option value="cd125">Anthony Subscription (Warren)</option>
+				<option value="cd69">Edgar-III</option>
+				<option value="cd24">Keith2</option>
+				<option value="cd19">Rowland</option>
+				<option value="cd64">Rowland II</option>
+				</optgroup>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+		<input type="text" id="cd_nm_str" name="cd_nm_str" value="" placeholder="New name" style="width: 359px; display: none;" class="" tabindex="2">
+	</div>
+
+	<div class="froat_l" style="margin-right:0;">
+		<p class="item_str">Addendum to product name</p>
+		<input type="text" id="addendum" name="addendum" value="" style="width:235px;" tabindex="3">
+	</div>
+	<div class="float_clear"></div>
+</div><!-- //task_form_a-->
+
+<div id="task_form_b">
+	<div class="froat_l">
+		<p class="item_str required">Product category</p>
+		<div class="sel_box">
+			<select name="prod_ct" id="prod_ct" tabindex="5">
+				<option value="--">-- Select an item --</option>
+				<option value="1" class="ckbft">Device-A</option>
+				<option value="5" class="ckbft">Device-B</option>
+				<option value="3" class="ckbft">Software-A</option>
+				<option value="4" class="ckbft">Cloud service</option>
+				<option value="2" class="ckbft">Subscription service</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+		<p class="item_str required">Your section</p>
+		<div class="sel_box">
+			<select name="dept" id="dept" tabindex="6">
+				<option value="--">-- Select an item --</option>
+				<option value="1" class="ckbft">Division-A</option>
+				<option value="2" class="ckbft">Solution Grp.</option>
+				<option value="3" class="ckbft">Marketing unit</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+		<p class="item_str required">Priority</p>
+		<div class="sel_box">
+			<select name="priority" id="priority" tabindex="7">
+				<option value="--">-- Select an item --</option>
+				<option value="1" class="ckbft">New product</option>
+				<option value="2" class="ckbft">Enhancement</option>
+				<option value="3" class="ckbft">Update documents</option>
+				<option value="4" class="ckbft">Immediate action required</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</div>
+
+	<div class="froat_l">
+		<p class="item_str">Remark by Team A</p>
+		<textarea name="pic_remark" id="pic_remark" tabindex="8"></textarea>
+	</div>
+	<div class="froat_l" style="margin-right:0;">
+		<p class="item_str">Remark by Team B</p>
+		<textarea name="Team B_remark" id="Team B_remark" style="margin-right:0;" disabled="" tabindex="9"></textarea>
+	</div>
+</div><!-- //task_form_b-->
+<div class="float_clear"></div>
+			<input type="hidden" name="tckt" value="6481ed3c7062b6f387c18ff7d62d252b">
+		</div><!-- //task_form -->
+
+		<table id="div_form">
+			<thead>
+			<tr class="lead" style="display: table-row;">
+				<th colspan="10">
+					<span class="info cp_ico"></span> icon copies the first line value to other blank lines.<br />
+					<span class="info calc_ico"></span> icon calculates the Delivery date from Launch date in the blank date-box. If there are multiple, it will be calculated from the earliest date.<br />
+					<span class="info lookup_ico"></span> icon displays a form to choose the product read from the Launch date confirmation system.<br />
+					<span class="info show_opt_ico"></span> icon displays options at the top of each Launch date. Use these for TBD or such as Early of the month etc.
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<div class="chk_box" style="text-align:center;">
+						Launch<br>
+						<input type="checkbox" name="tgl_trgt" id="tgl_trgt" checked="" tabindex="-1">
+						<label for="tgl_trgt" class="tgl_trgt " aria-hidden="true" role="presentation"></label>
+					</div>
+				</th>
+				<th><span class="required">Delivery date</span><span class="cp_ico delivdate" style="display: inline;"></span><br><span class="calc_ico" style="display: inline;"></span></th>
+				<th><span class="required">Product name</span><span class="cp_ico prod_nm" style="display: inline;"></span></th>
+				<th>Lan-guage</th>
+				<th>Branch</th>
+				<th>
+					<span class="required">Launch date</span><span class="cp_ico reldate" style="display: inline;"></span><br><span class="lookup_ico" style="display: inline;"></span><span class="show_opt_ico" style="display: inline;"></span>
+				</th>
+				<th><span class="required">From</span><span class="cp_ico deliv_pic" style="display: inline;"></span></th>
+				<th><span class="required">Status of<br>Team A</span></th>
+				<th><span class="required">Status of Team B</span></th>
+				<th>Member of branches</th>
+			</tr>
+			</thead>
+			<tbody>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[1]" id="trgt1" value="1" checked="" tabindex="-1">
+			<label for="trgt1" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td rowspan="10" style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate1" name="delivdate[1]" class="" value="" tabindex="15">
+	</td>
+	<td rowspan="10" style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm1" name="prod_nm[1]" value="" class="" tabindex="31">
+	</td>
+	<td rowspan="10" class="rw_branch
+" style="background-color: rgb(244, 244, 244);">EN</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">AU</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 1_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="1_reldate_pre" id="1_reldate_pre_td" value="td" checked="">
+				<label for="1_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="1_reldate_pre" id="1_reldate_pre_tbd" value="tbd">
+				<label for="1_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="1_reldate_pre" id="1_reldate_pre_ear" value="ear">
+				<label for="1_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="1_reldate_pre" id="1_reldate_pre_mid" value="mid">
+				<label for="1_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="1_reldate_pre" id="1_reldate_pre_lat" value="lat">
+				<label for="1_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate1" name="reldate[1]" class="" value="" tabindex="47">
+	</td>
+	<td rowspan="10" style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic1" name="deliv_pic[1]" value="" style="width:120px;" class="" tabindex="63">
+	</td>
+	<td rowspan="10" style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[1]" id="pic_stts[1]" tabindex="79">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[1]" id="Team B_stts[1]" tabindex="95" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails1" name="opcoemails[1]" tabindex="111"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[2]" id="trgt2" value="2" checked="" tabindex="-1">
+			<label for="trgt2" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">NZ</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 2_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="2_reldate_pre" id="2_reldate_pre_td" value="td" checked="">
+				<label for="2_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="2_reldate_pre" id="2_reldate_pre_tbd" value="tbd">
+				<label for="2_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="2_reldate_pre" id="2_reldate_pre_ear" value="ear">
+				<label for="2_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="2_reldate_pre" id="2_reldate_pre_mid" value="mid">
+				<label for="2_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="2_reldate_pre" id="2_reldate_pre_lat" value="lat">
+				<label for="2_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate2" name="reldate[2]" class="" value="" tabindex="48">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[2]" id="Team B_stts[2]" tabindex="96" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails2" name="opcoemails[2]" tabindex="112"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[3]" id="trgt3" value="3" checked="" tabindex="-1">
+			<label for="trgt3" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">SG</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 3_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="3_reldate_pre" id="3_reldate_pre_td" value="td" checked="">
+				<label for="3_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="3_reldate_pre" id="3_reldate_pre_tbd" value="tbd">
+				<label for="3_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="3_reldate_pre" id="3_reldate_pre_ear" value="ear">
+				<label for="3_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="3_reldate_pre" id="3_reldate_pre_mid" value="mid">
+				<label for="3_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="3_reldate_pre" id="3_reldate_pre_lat" value="lat">
+				<label for="3_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate3" name="reldate[3]" class="" value="" tabindex="49">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[3]" id="Team B_stts[3]" tabindex="97" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails3" name="opcoemails[3]" tabindex="113"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[4]" id="trgt4" value="4" checked="" tabindex="-1">
+			<label for="trgt4" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">HU</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 4_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="4_reldate_pre" id="4_reldate_pre_td" value="td" checked="">
+				<label for="4_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="4_reldate_pre" id="4_reldate_pre_tbd" value="tbd">
+				<label for="4_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="4_reldate_pre" id="4_reldate_pre_ear" value="ear">
+				<label for="4_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="4_reldate_pre" id="4_reldate_pre_mid" value="mid">
+				<label for="4_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="4_reldate_pre" id="4_reldate_pre_lat" value="lat">
+				<label for="4_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate4" name="reldate[4]" class="" value="" tabindex="50">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[4]" id="Team B_stts[4]" tabindex="98" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails4" name="opcoemails[4]" tabindex="114"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[5]" id="trgt5" value="5" checked="" tabindex="-1">
+			<label for="trgt5" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">GR</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 5_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="5_reldate_pre" id="5_reldate_pre_td" value="td" checked="">
+				<label for="5_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="5_reldate_pre" id="5_reldate_pre_tbd" value="tbd">
+				<label for="5_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="5_reldate_pre" id="5_reldate_pre_ear" value="ear">
+				<label for="5_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="5_reldate_pre" id="5_reldate_pre_mid" value="mid">
+				<label for="5_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="5_reldate_pre" id="5_reldate_pre_lat" value="lat">
+				<label for="5_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate5" name="reldate[5]" class="" value="" tabindex="51">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[5]" id="Team B_stts[5]" tabindex="99" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails5" name="opcoemails[5]" tabindex="115"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[6]" id="trgt6" value="6" checked="" tabindex="-1">
+			<label for="trgt6" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">HK</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 6_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="6_reldate_pre" id="6_reldate_pre_td" value="td" checked="">
+				<label for="6_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="6_reldate_pre" id="6_reldate_pre_tbd" value="tbd">
+				<label for="6_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="6_reldate_pre" id="6_reldate_pre_ear" value="ear">
+				<label for="6_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="6_reldate_pre" id="6_reldate_pre_mid" value="mid">
+				<label for="6_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="6_reldate_pre" id="6_reldate_pre_lat" value="lat">
+				<label for="6_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate6" name="reldate[6]" class="" value="" tabindex="52">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[6]" id="Team B_stts[6]" tabindex="100" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails6" name="opcoemails[6]" tabindex="116"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[7]" id="trgt7" value="7" checked="" tabindex="-1">
+			<label for="trgt7" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">IT</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 7_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="7_reldate_pre" id="7_reldate_pre_td" value="td" checked="">
+				<label for="7_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="7_reldate_pre" id="7_reldate_pre_tbd" value="tbd">
+				<label for="7_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="7_reldate_pre" id="7_reldate_pre_ear" value="ear">
+				<label for="7_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="7_reldate_pre" id="7_reldate_pre_mid" value="mid">
+				<label for="7_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="7_reldate_pre" id="7_reldate_pre_lat" value="lat">
+				<label for="7_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate7" name="reldate[7]" class="" value="" tabindex="53">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[7]" id="Team B_stts[7]" tabindex="101" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails7" name="opcoemails[7]" tabindex="117"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[8]" id="trgt8" value="8" checked="" tabindex="-1">
+			<label for="trgt8" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">VN</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 8_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="8_reldate_pre" id="8_reldate_pre_td" value="td" checked="">
+				<label for="8_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="8_reldate_pre" id="8_reldate_pre_tbd" value="tbd">
+				<label for="8_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="8_reldate_pre" id="8_reldate_pre_ear" value="ear">
+				<label for="8_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="8_reldate_pre" id="8_reldate_pre_mid" value="mid">
+				<label for="8_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="8_reldate_pre" id="8_reldate_pre_lat" value="lat">
+				<label for="8_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate8" name="reldate[8]" class="" value="" tabindex="54">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[8]" id="Team B_stts[8]" tabindex="102" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails8" name="opcoemails[8]" tabindex="118"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[9]" id="trgt9" value="9" checked="" tabindex="-1">
+			<label for="trgt9" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">MM</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 9_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="9_reldate_pre" id="9_reldate_pre_td" value="td" checked="">
+				<label for="9_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="9_reldate_pre" id="9_reldate_pre_tbd" value="tbd">
+				<label for="9_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="9_reldate_pre" id="9_reldate_pre_ear" value="ear">
+				<label for="9_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="9_reldate_pre" id="9_reldate_pre_mid" value="mid">
+				<label for="9_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="9_reldate_pre" id="9_reldate_pre_lat" value="lat">
+				<label for="9_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate9" name="reldate[9]" class="" value="" tabindex="55">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[9]" id="Team B_stts[9]" tabindex="103" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails9" name="opcoemails[9]" tabindex="119"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[10]" id="trgt10" value="10" checked="" tabindex="-1">
+			<label for="trgt10" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">CA</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 10_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="10_reldate_pre" id="10_reldate_pre_td" value="td" checked="">
+				<label for="10_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="10_reldate_pre" id="10_reldate_pre_tbd" value="tbd">
+				<label for="10_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="10_reldate_pre" id="10_reldate_pre_ear" value="ear">
+				<label for="10_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="10_reldate_pre" id="10_reldate_pre_mid" value="mid">
+				<label for="10_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="10_reldate_pre" id="10_reldate_pre_lat" value="lat">
+				<label for="10_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate10" name="reldate[10]" class="" value="" tabindex="56">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[10]" id="Team B_stts[10]" tabindex="104" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails10" name="opcoemails[10]" tabindex="120"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[11]" id="trgt11" value="11" checked="" tabindex="-1">
+			<label for="trgt11" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate11" name="delivdate[11]" class="" value="" tabindex="16">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm11" name="prod_nm[11]" value="" class="" tabindex="32">
+	</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">SC</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">CN</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 11_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="11_reldate_pre" id="11_reldate_pre_td" value="td" checked="">
+				<label for="11_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="11_reldate_pre" id="11_reldate_pre_tbd" value="tbd">
+				<label for="11_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="11_reldate_pre" id="11_reldate_pre_ear" value="ear">
+				<label for="11_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="11_reldate_pre" id="11_reldate_pre_mid" value="mid">
+				<label for="11_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="11_reldate_pre" id="11_reldate_pre_lat" value="lat">
+				<label for="11_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate11" name="reldate[11]" class="" value="" tabindex="57">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic11" name="deliv_pic[11]" value="" style="width:120px;" class="" tabindex="64">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[11]" id="pic_stts[11]" tabindex="80">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[11]" id="Team B_stts[11]" tabindex="105" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails11" name="opcoemails[11]" tabindex="121"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[12]" id="trgt12" value="12" checked="" tabindex="-1">
+			<label for="trgt12" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td rowspan="2" style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate12" name="delivdate[12]" class="" value="" tabindex="17">
+	</td>
+	<td rowspan="2" style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm12" name="prod_nm[12]" value="" class="" tabindex="33">
+	</td>
+	<td rowspan="2" class="rw_branch
+" style="background-color: rgb(244, 244, 244);">TC</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">TW</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 12_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="12_reldate_pre" id="12_reldate_pre_td" value="td" checked="">
+				<label for="12_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="12_reldate_pre" id="12_reldate_pre_tbd" value="tbd">
+				<label for="12_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="12_reldate_pre" id="12_reldate_pre_ear" value="ear">
+				<label for="12_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="12_reldate_pre" id="12_reldate_pre_mid" value="mid">
+				<label for="12_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="12_reldate_pre" id="12_reldate_pre_lat" value="lat">
+				<label for="12_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate12" name="reldate[12]" class="" value="" tabindex="58">
+	</td>
+	<td rowspan="2" style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic12" name="deliv_pic[12]" value="" style="width:120px;" class="" tabindex="65">
+	</td>
+	<td rowspan="2" style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[12]" id="pic_stts[12]" tabindex="81">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[12]" id="Team B_stts[12]" tabindex="106" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails12" name="opcoemails[12]" tabindex="122"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[13]" id="trgt13" value="13" checked="" tabindex="-1">
+			<label for="trgt13" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	
+	
+	
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">HK</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 13_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="13_reldate_pre" id="13_reldate_pre_td" value="td" checked="">
+				<label for="13_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="13_reldate_pre" id="13_reldate_pre_tbd" value="tbd">
+				<label for="13_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="13_reldate_pre" id="13_reldate_pre_ear" value="ear">
+				<label for="13_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="13_reldate_pre" id="13_reldate_pre_mid" value="mid">
+				<label for="13_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="13_reldate_pre" id="13_reldate_pre_lat" value="lat">
+				<label for="13_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate13" name="reldate[13]" class="" value="" tabindex="59">
+	</td>
+	
+	
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[13]" id="Team B_stts[13]" tabindex="107" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails13" name="opcoemails[13]" tabindex="123"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[14]" id="trgt14" value="14" checked="" tabindex="-1">
+			<label for="trgt14" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate14" name="delivdate[14]" class="" value="" tabindex="18">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm14" name="prod_nm[14]" value="" class="" tabindex="34">
+	</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">DE</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">DE</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 14_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="14_reldate_pre" id="14_reldate_pre_td" value="td" checked="">
+				<label for="14_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="14_reldate_pre" id="14_reldate_pre_tbd" value="tbd">
+				<label for="14_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="14_reldate_pre" id="14_reldate_pre_ear" value="ear">
+				<label for="14_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="14_reldate_pre" id="14_reldate_pre_mid" value="mid">
+				<label for="14_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="14_reldate_pre" id="14_reldate_pre_lat" value="lat">
+				<label for="14_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate14" name="reldate[14]" class="" value="" tabindex="60">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic14" name="deliv_pic[14]" value="" style="width:120px;" class="" tabindex="66">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[14]" id="pic_stts[14]" tabindex="82">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[14]" id="Team B_stts[14]" tabindex="108" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails14" name="opcoemails[14]" tabindex="124"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[15]" id="trgt15" value="15" checked="" tabindex="-1">
+			<label for="trgt15" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate15" name="delivdate[15]" class="" value="" tabindex="19">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm15" name="prod_nm[15]" value="" class="" tabindex="35">
+	</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">IT</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">IT</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 15_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="15_reldate_pre" id="15_reldate_pre_td" value="td" checked="">
+				<label for="15_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="15_reldate_pre" id="15_reldate_pre_tbd" value="tbd">
+				<label for="15_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="15_reldate_pre" id="15_reldate_pre_ear" value="ear">
+				<label for="15_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="15_reldate_pre" id="15_reldate_pre_mid" value="mid">
+				<label for="15_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="15_reldate_pre" id="15_reldate_pre_lat" value="lat">
+				<label for="15_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate15" name="reldate[15]" class="" value="" tabindex="61">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic15" name="deliv_pic[15]" value="" style="width:120px;" class="" tabindex="67">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[15]" id="pic_stts[15]" tabindex="83">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[15]" id="Team B_stts[15]" tabindex="109" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails15" name="opcoemails[15]" tabindex="125"></textarea>
+	</td>
+</tr>
+<tr>
+	<td class="" style="background-color: rgb(244, 244, 244);">
+		<div class="chk_box" style="text-align:center;">
+			<input type="checkbox" name="trgt[16]" id="trgt16" value="16" checked="" tabindex="-1">
+			<label for="trgt16" class="trgt" aria-hidden="true" role="presentation"></label>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="delivdate16" name="delivdate[16]" class="" value="" tabindex="20">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="prod_nm16" name="prod_nm[16]" value="" class="" tabindex="36">
+	</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">VI</td>
+	<td class="rw_branch
+" style="background-color: rgb(244, 244, 244);">VN</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="rd_box 16_reldate_date_opt_box" style="display: none;">
+			<span class="rd_p mini">
+				<input type="radio" name="16_reldate_pre" id="16_reldate_pre_td" value="td" checked="">
+				<label for="16_reldate_pre_td">the Day</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="16_reldate_pre" id="16_reldate_pre_tbd" value="tbd">
+				<label for="16_reldate_pre_tbd">TBD</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="16_reldate_pre" id="16_reldate_pre_ear" value="ear">
+				<label for="16_reldate_pre_ear">Early</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="16_reldate_pre" id="16_reldate_pre_mid" value="mid">
+				<label for="16_reldate_pre_mid">Mid</label>
+			</span>
+			<span class="rd_p mini">
+				<input type="radio" name="16_reldate_pre" id="16_reldate_pre_lat" value="lat">
+				<label for="16_reldate_pre_lat">Late</label>
+			</span>
+		</div>
+		<input type="date" max="9999-12-31" placeholder="yyyy-mm-dd" id="reldate16" name="reldate[16]" class="" value="" tabindex="62">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<input type="text" id="deliv_pic16" name="deliv_pic[16]" value="" style="width:120px;" class="" tabindex="68">
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="pic_stts[16]" id="pic_stts[16]" tabindex="84">
+				<option value="1" class="sel ckbft" selected="selected">Preparing</option>
+				<option value="3" class="ckbft">Delivered</option>
+				<option value="2" class="ckbft">Comfirmed</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<div class="sel_box">
+			<select name="Team B_stts[16]" id="Team B_stts[16]" tabindex="110" disabled="">
+				<option value="1" class="sel ckbft" selected="selected">Waiting</option>
+				<option value="3" class="ckbft">Pending Team A approval</option>
+				<option value="4" class="ckbft">Pending Branches approval</option>
+				<option value="2" class="ckbft">Updated in authoring site</option>
+				<option value="5" class="ckbft">Published</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+	</td>
+	<td style="background-color: rgb(244, 244, 244);">
+		<textarea id="opcoemails16" name="opcoemails[16]" tabindex="126"></textarea>
+	</td>
+</tr>
+			</tbody>
+		</table><!-- //div_form -->
+
+		<div class="btn_box" style="margin-top:30px;">
+			<input type="submit" name="submit" value="Save" tabindex="1">
+		</div>
+	</form><!-- //add_form -->
+
+	<div id="pull_form" class="" style="display: none; position: absolute; top: 760px; left: 0px;">
+		<p style="text-align: right;"><span class="close_ico" style="display: inline;"></span></p>
+		<form method="POST" action="">
+		<div class="sel_box">
+			<select name="product_from_lcs" id="product_from_lcs">
+				<option value="--" class=" sel" selected="selected">-- Select an item --</option>
+				<option value="66" class="ckbft">Late-Feb-2022 ---- SW ver. 2.0</option>
+				<option value="65" class="ckbft">Early-Mar-2022 ---- Product A - Post launch -</option>
+				<option value="64" class="ckbft">Early-Oct-2021 ---- Device A</option>
+				<option value="63" class="ckbft">Early-Oct-2021 ---- Product C</option>
+			</select>
+			<span class="decor" aria-hidden="true" role="presentation"></span>
+		</div>
+		<div class="btn_box" style="margin-top:15px;">
+			<input type="submit" name="pull" value="Pull in the launche dates" tabindex="0" style="width: 270px;">
+		</div>
+		</form>
+	</div>
+	</div>
+
+	<a href="#" class="decnone" tabindex="-1"><div id="page_top" style="display: none;"></div></a>
+</div>
+
+	<footer>
+		<ul>
+			<li class="ft_lgnm">User-Team A is logged in</li>
+		</ul>
+	</footer>
+</body>
+</html>
